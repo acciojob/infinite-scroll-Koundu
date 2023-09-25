@@ -1,6 +1,6 @@
 //your code is here
 
-window.addEventListener('DOMContentLoaded',{
+window.addEventListener('DOMContentLoaded',function() {
 	const olList = document.getElementById("infi-list");
 	let itemCount = 10;
 	const increment = 2;
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded',{
 		itemCount += increment;
 	}
 
-	olList.addEventListener('scroll',function(){
+olList.addEventListener('scroll',function(){
 		const scrollPosition = this.scrollTop + this.clientHeight;
 		const totalHeight = olList.scrollHeight;
 		if(scrollPosition >= totalHeight - this.clientHeight){
