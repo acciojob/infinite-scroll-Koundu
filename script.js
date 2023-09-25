@@ -1,6 +1,6 @@
 //your code is here
 
-document.addEventListener('DOMContentLoaded',{
+window.addEventListener('DOMContentLoaded',{
 	const olList = document.getElementById("infi-list");
 	let itemCount = 10;
 	const increment = 2;
