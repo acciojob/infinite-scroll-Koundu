@@ -1,18 +1,25 @@
 //your code is here
 
-window.addEventListener('DOMContentLoaded',function() {
+document.addEventListener('DOMContentLoaded',function() {
 	const olList = document.getElementById("infi-list");
 	let itemCount = 10;
 	const increment = 2;
-
+	intial = function intialItems(itemCount=10){
+		for(let i=1;i<itemCount+1;i++){
+		const li = document.createElement("li");
+		li.textContent = "Item "+(i);
+		olList.appendChild(li);
+		}
+	}
+	intial();
 	// Function to add more list items
 	function addItem(){
-		for(let i=0;i<=increment;i++){
+		for(let i=1;i<increment+1;i++){
 			const li = document.createElement("li");
 			li.textContent = "Item "+(itemCount+i);
 			olList.appendChild(li);
 		}
-		itemCount += increment;
+		itemCount = itemCount+increment;
 	}
 
 olList.addEventListener('scroll',function(){
@@ -24,3 +31,4 @@ olList.addEventListener('scroll',function(){
 	});
 	addItem();
 });
+
